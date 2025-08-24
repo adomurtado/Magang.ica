@@ -1,107 +1,91 @@
-@extends('layouts.app')
-
-@section('content')
-<!-- Navbar -->
-<nav class="navbar navbar-expand-lg py-4 px-5 bg-[#0C1D34] fixed-top">
-  <div class="container-fluid">
-    <a class="navbar-brand text-white fw-bold flex items-center gap-2" href="#">
-      <img src="{{ asset('img/logo.png') }}" alt="Logo" class="h-10">
-      <div>
-        <div class="text-lg font-bold">Cikara Studio</div>
-        <div class="text-xs">Games & Apps Developers</div>
+<x-apps.layout>
+  <section class="py-16 bg-[#112233] text-white font-sans">
+  <div class="container mx-auto px-4">
+    
+    <div class="grid md:grid-cols-2 gap-8 items-center mb-16">
+      <div class="rounded-xl overflow-hidden shadow-lg">
+        <a href="https://youtu.be/ExlXsQBhlNg?si=lMYXI52TbeQ9xXjR" target="_blank">
+          <img src="https://blog.kantorku.id/wp-content/uploads/2025/06/program-kerja-perusahaan.webp" 
+               alt="Featured Course" 
+               class="w-full h-full object-cover">
+        </a>
       </div>
-    </a>
-    <button class="navbar-toggler bg-white" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="navMenu">
-      <ul class="navbar-nav ms-auto gap-3">
-        <li><a class="nav-link text-white hover:text-yellow-400" href="#beranda">Beranda</a></li>
-        <li><a class="nav-link text-white hover:text-yellow-400" href="#visi">Program</a></li>
-        <li><a class="nav-link text-white hover:text-yellow-400" href="#galeri">Galeri</a></li>
-        <li><a class="nav-link text-white hover:text-yellow-400" href="#showcase">Showcase</a></li>
-        <li><a class="btn-nav" href="#pendaftaran">Pendaftaran</a></li>
-      </ul>
+    
+      <div>
+        <img src="https://blog.kantorku.id/wp-content/uploads/2025/06/program-kerja-perusahaan.webp" alt="Featured Course" class="mb-2 w-32"> 
+        <h2 class="text-3xl md:text-4xl font-bold mt-2">Mulailah Langkah Pertamamu untuk menjadi <span class="text-yellow-400">Game Developer</span></h2>
+        <p class="text-gray-300 mt-4">Jelajahi video pembelajaran game development yang tersedia.</p>
+        <ul class="mt-4 space-y-2 text-gray-300">
+          <li class="flex items-center gap-2"><i class="bi bi-check-circle-fill text-green-400"></i> Fundamental</li>
+          <li class="flex items-center gap-2"><i class="bi bi-check-circle-fill text-green-400"></i> Beragam Studi Kasus</li>
+          <li class="flex items-center gap-2"><i class="bi bi-check-circle-fill text-green-400"></i> Bisa Langsung Praktek</li>
+          <li class="flex items-center gap-2"><i class="bi bi-check-circle-fill text-green-400"></i> 10+ Video Pembelajaran</li>
+        </ul>
+        <a href="https://youtu.be/5wnZU9Ov_0c?si=ENDcPIi4E2kt3YiK" target="_blank" 
+           class="inline-block mt-6 px-6 py-3 bg-yellow-500 text-[#112233] font-semibold rounded-lg shadow hover:bg-yellow-600 transition">
+          Mulai Belajar
+        </a>
+      </div>
     </div>
-  </div>
-</nav>
 
-<!-- Hero -->
-<section id="beranda" class="min-h-screen flex flex-col lg:flex-row items-center justify-between px-16 pt-28 gap-10">
-  <div>
-    <h1 class="text-5xl font-bold leading-tight mb-4">
-      Halo Selamat<br>Datang Di Dunia<br>Petualangan<br>Cikara
-    </h1>
-    <p class="mb-6">Cikara Studio</p>
-    <a href="#pendaftaran" class="btn-gradient">DAFTAR</a>
-  </div>
-  <div>
-    <img src="{{ asset('img/hero.jpg') }}" alt="Hero" class="rounded-xl w-80">
-  </div>
-</section>
-
-<!-- Visi & Misi -->
-<section id="visi" class="px-16 py-20 bg-[#102544]">
-  <h2 class="text-yellow-400 text-center text-2xl font-bold mb-6">VISI & MISI CIKARA STUDIO</h2>
-
-  <div class="mb-8">
-    <h3 class="text-pink-400 font-bold mb-2">💕 Visi Cikara Studio</h3>
-    <p>Menjadi perusahaan teknologi kreatif terdepan yang menghasilkan solusi digital berkualitas melalui aplikasi, web, game, dan desain, serta menjadi ruang tumbuh dan kolaborasi bagi generasi pembelajar dan pelaku industri kreatif.</p>
-  </div>
-
-  <div class="mb-12">
-    <h3 class="text-pink-400 font-bold mb-2">📌 Misi Cikara Studio</h3>
-    <ul class="list-disc pl-6 space-y-1">
-      <li>Mengembangkan produk digital yang inovatif dan berdampak di berbagai sektor.</li>
-      <li>Menciptakan ekosistem pembelajaran yang digital dan kolaboratif.</li>
-      <li>Memberdayakan sumber daya manusia melalui mentoring, pelatihan, dan sistem pembelajaran.</li>
-      <li>Menumbuhkan jejaring komunitas digital demi membangun IP lokal yang kuat.</li>
-      <li>Mewujudkan pertumbuhan keberlanjutan melalui kolaborasi lintas bidang.</li>
-    </ul>
-  </div>
-
-  <div class="grid lg:grid-cols-2 gap-10 items-center">
     <div>
-      <h3 class="text-2xl font-bold mb-4">PROGRAM PETUALANGAN MAGANG</h3>
-      <h4 class="text-yellow-300 font-bold mb-2">Sistem Magang di Cikara Studio</h4>
-      <p>Cikara Studio mengembangkan program magang berbasis project sehingga peserta dapat langsung beradaptasi dan terlibat dalam ekosistem studio yang profesional.</p>
+      <h3 class="text-2xl font-bold mb-8 text-center text-white">Kursus Game Development</h3>
+      <div class="grid md:grid-cols-3 lg:grid-cols-4 gap-6">
+        
+        <a href="https://youtu.be/5wnZU9Ov_0c?si=u-G9Znd43VRPhSAR" target="_blank" class="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-2xl transition">
+          <img src="https://blog.kantorku.id/wp-content/uploads/2025/06/program-kerja-perusahaan.webp" alt="Kursus 1" class="w-full h-40 object-cover">
+          <div class="p-4 text-gray-800">
+            <span class="text-xs uppercase text-black-500">Game Development</span>
+            <h4 class="text-lg font-semibold mt-2">Membuat Game 2D Susun Huruf di Unity 3D</h4>
+            <div class="flex items-center justify-between mt-4 text-gray-500 text-sm">
+              <span><i class="bi bi-bar-chart"></i> Beginner</span>
+              <span><i class="bi bi-clock"></i> 1h</span>
+            </div>
+          </div>
+        </a>
 
-      <h4 class="mt-4 font-bold">Alur Magang</h4>
-      <ol class="list-decimal pl-6 space-y-1">
-        <li>Pendaftaran & Seleksi Awal</li>
-        <li>Wawancara</li>
-        <li>Penempatan posisi sesuai kemampuan</li>
-        <li>Onboarding & Pembekalan</li>
-        <li>Pelaksanaan magang</li>
-        <li>Evaluasi & Sertifikasi</li>
-      </ol>
-    </div>
-    <div class="flex justify-center">
-      <img src="{{ asset('img/bajaklaut.png') }}" alt="Bajak Laut" class="w-64">
+        <a href="https://youtu.be/icCrHYfqsSg?si=cKbuT--sNup-LMiV" target="_blank" class="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-2xl transition">
+          <img src="https://blog.kantorku.id/wp-content/uploads/2025/06/program-kerja-perusahaan.webp" alt="Kursus 2" class="w-full h-40 object-cover">
+          <div class="p-4 text-gray-800">
+            <span class="text-xs uppercase text-black-500">Game Development</span>
+            <h4 class="text-lg font-semibold mt-2">Membuat Game Kuis Versi Drag and Drop di Unity 3D</h4>
+            <div class="flex items-center justify-between mt-4 text-gray-500 text-sm">
+              <span><i class="bi bi-bar-chart"></i> Beginner</span>
+              <span><i class="bi bi-clock"></i> 1h 30m</span>
+            </div>
+          </div>
+        </a>
+
+        <!-- Card 3 -->
+        <a href="https://youtu.be/DY2ttgaoNOM?si=SYdI0hDfmqHlWj6v" target="_blank" class="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-2xl transition">
+          <img src="https://blog.kantorku.id/wp-content/uploads/2025/06/program-kerja-perusahaan.webp" alt="Kursus 3" class="w-full h-40 object-cover">
+          <div class="p-4 text-gray-800">
+            <span class="text-xs uppercase text-black-500">Game Development</span>
+            <h4 class="text-lg font-semibold mt-2">Mengambil Data JSON Dari API di UNITY 3D</h4> 
+            <div class="flex items-center justify-between mt-4 text-gray-500 text-sm">
+              <span><i class="bi bi-bar-chart"></i> Intermediate</span>
+              <span><i class="bi bi-clock"></i> 2h</span>
+            </div>
+          </div>
+        </a>
+
+         <!-- Card 3 -->
+        <a href="https://youtu.be/DY2ttgaoNOM?si=Qv9lfjVA0HW-3xaU" target="_blank" class="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-2xl transition">
+          <img src="https://blog.kantorku.id/wp-content/uploads/2025/06/program-kerja-perusahaan.webp" alt="Kursus 3" class="w-full h-40 object-cover">
+          <div class="p-4 text-gray-800">
+            <span class="text-xs uppercase text-black-500">Game Development</span>
+            <h4 class="text-lg font-semibold mt-2">Membuat Game Kuis Versi Essay di Unity 3D</h4>
+            <div class="flex items-center justify-between mt-4 text-gray-500 text-sm">
+              <span><i class="bi bi-bar-chart"></i> Intermediate</span>
+              <span><i class="bi bi-clock"></i> 2h</span>
+            </div>
+          </div>
+        </a>
+
+        <!-- Tambahkan card lainnya dengan pola yang sama -->
+
+      </div>
     </div>
   </div>
 </section>
-
-<!-- Galeri -->
-<section id="galeri" class="px-16 py-20">
-  <h2 class="text-3xl font-bold mb-4">Galeri</h2>
-  <p>Isi galeri...</p>
-</section>
-
-<!-- Showcase -->
-<section id="showcase" class="px-16 py-20 bg-[#102544]">
-  <h2 class="text-3xl font-bold mb-4">Showcase</h2>
-  <p>Isi showcase...</p>
-</section>
-
-<!-- Pendaftaran -->
-<section id="pendaftaran" class="px-16 py-20">
-  <h2 class="text-3xl font-bold mb-4">Pendaftaran</h2>
-  <form class="max-w-lg">
-    <input type="text" placeholder="Nama" class="form-control mb-3">
-    <input type="email" placeholder="Email" class="form-control mb-3">
-    <textarea placeholder="Pesan" class="form-control mb-3"></textarea>
-    <button class="btn-gradient">Kirim</button>
-  </form>
-</section>
-@endsection
+</x-apps.layout>
